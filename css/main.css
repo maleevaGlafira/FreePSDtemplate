@@ -53,6 +53,10 @@ table {
     
 }
 
+a{
+    text-decoration: none;
+}
+
 html{
     font:3.12vw/5vw 'Montserrat', sans-serif;
     color: #515151;
@@ -62,7 +66,7 @@ html{
     position: relative;
 }
 
-#navTop, #navTop p, #navTop .topmenu a{
+#navTop, #navTop .navtitle, #navTop .topmenu .topmenuItem{
     color: white;
     background: #373c3f;
 }
@@ -99,7 +103,7 @@ html{
   /*  cursor: pointer;*/
 }
 
-#navTop  .showMenu img{
+#navTop  .showMenu .showMenuImg{
     height: 1rem;
 }
 
@@ -112,12 +116,12 @@ html{
     transition:1s;
 }
 
-#navTop .showMenu:hover+.topmenu  {
+#navTop:hover .topmenu  {
     transform: translateY(11.5vw);
     transition: 1s ease-out;   
 }
 
-#navTop .topmenu li a{
+#navTop .topmenu li .topmenuItem{
     display: block;
     padding: 5vw  0 5vw 5vw;
     text-decoration: none;
@@ -142,12 +146,14 @@ html{
     margin-bottom:6.1vw;
 }
 
-.header-block .row  a{
+.header-block .row  {
     font-size: 3.5vw;
-    text-decoration: none;
-    color: #aad7e0;
+
 }
 
+.header-block .row a{
+    color: #aad7e0;
+}
 .header-block .row .imgrow{
     display: block;
     float: right;
@@ -171,13 +177,7 @@ html{
     transition: 1s; 
 }
 
-.header-block .imgrow a:hover{
-    /* border-radius: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow:  0 0 1px 7px rgba(255, 255, 255, 0.3);
-    transform: rotateZ(990deg);
-    transition: 1s;*/
-}
+
 
 .header-row-3{
     display: flex;
@@ -192,19 +192,25 @@ html{
     display:flex;
     align-items: center;
 }
- 
-.header-row-3 p{
-    align-items:center;
+
+.header-row-3 .contentrow{
     font-size:2.5vw ;
+}
+.header-row-3 .header-row-text{
+    align-items:center;
+
 }
 
 .header-row-3 .divrow{
     width:23vw;
     font-size:1.8vw ;
     background:#bc3183;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 
 }
-.header-row-3 .divrow a {
+.header-row-3 .divrow .divrow-link {
     display:flex;
     justify-content: center;
     align-items:center;
@@ -224,14 +230,7 @@ html{
     transition: 1s;
 }
 
-.header-row-3 .divrow:hover img{
-   /* border-radius: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow:  0 0 1px 7px rgba(255, 255, 255, 0.3);
-    transform: translateX(400%);
-    transition: 1s;*/
 
-}
 
 .galary li .blockRow{
     display: flex;
@@ -258,7 +257,7 @@ html{
     opacity: 0.5;
 }
 
-.galary .blockRow:hover img {
+.galary .blockRow:hover .galary-img {
     /*border-radius: 100%;
     padding: 0.1rem;
     background: rgba(255, 255, 255, 0.3);
@@ -267,7 +266,7 @@ html{
     transition: 1s;
 }
 
-.galary ul li img{
+.galary ul li .galary-img{
     width: 100%;
     height: auto;
 }
@@ -275,21 +274,21 @@ html{
 #content {
     padding: 12.5vw 9.4vw 12.5vw 11.5vw;
     background: #ebebeb;
+    line-height: 2rem;
 }
 
-#content h1 ,#content h1 a {
+#content .content-header {
     color: #088ca5;
     font-size: 1.5rem;
     text-decoration: none;
+    margin-bottom: 1.7rem;
 }
 
-#content h1{
-    margin-bottom: 1.7rem;
-} 
 
-#content p{
+
+#content .content-text{
     margin-bottom: 1.7rem;
-    line-height: 2rem;
+
 }
 
 /*--  --------------------------------------------------*/
@@ -304,7 +303,7 @@ html{
         height: 9.5vw;
     }
     
-    #navTop .titleRow p,
+    #navTop .titleRow .navtitle,
     #navTop .titleRow .showMenu{
         display: none;
     }
@@ -325,7 +324,7 @@ html{
         display: inline-flex;        
     }
     
-    #navTop .topmenu li a{
+    #navTop .topmenu li .topmenuItem{
         padding: 0 1.8vw;
         vertical-align: middle;
         line-height: 9.5vw;
@@ -341,7 +340,7 @@ html{
     }
     
     .galary ,.galary ul li .blockRow,
-    .galary ul li img{
+    .galary ul li .galary-img{
         height: 29vw;
     }
     
@@ -360,13 +359,13 @@ html{
         width: 34%;
     }
     
-  .galary ul li img{                
+  .galary ul li .galary-img{
         width: auto;
         transition: 0.5s;
         cursor: pointer;
     }
     
-    .galary li img:hover{
+    .galary li .galary-img:hover{
         transform: scale(1.1);
         transition: 0.5s;
     }
@@ -390,7 +389,7 @@ html{
            overflow: hidden;
     }
     
-    #content .text p{
+    #content .text .content-text{
         margin-bottom: 1.5rem;
 
     }
