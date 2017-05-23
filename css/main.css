@@ -1,0 +1,414 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+
+html{
+    font:3.12vw/5vw 'Montserrat', sans-serif;
+    color: #515151;
+}
+
+.container{
+    position: relative;
+}
+
+#navTop, #navTop p, #navTop .topmenu a{
+    color: white;
+    background: #373c3f;
+}
+
+ #navTop  {
+     cursor: pointer;
+     display: flex;
+     height: 11.5vw;
+}
+
+
+#navTop  .titleRow{ 
+    display: flex;
+    justify-content: space-between;
+    align-items:stretch;
+    width:100%;
+}
+
+#navTop .navtitle{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding-left: 6vw;    
+    color: white;
+}
+
+#navTop .showMenu{
+    float: right;
+    background: #202529;
+    width:12.8vw;
+    line-height:  11.5vw;
+    vertical-align: middle;
+    text-align: center;
+  /*  cursor: pointer;*/
+}
+
+#navTop  .showMenu img{
+    height: 1rem;
+}
+
+
+#navTop .topmenu{
+    position: absolute;
+    width: 100%;
+    top: auto;
+    transform: translateY(-100vw);
+    transition:1s;
+}
+
+#navTop .showMenu:hover+.topmenu  {
+    transform: translateY(11.5vw);
+    transition: 1s ease-out;   
+}
+
+#navTop .topmenu li a{
+    display: block;
+    padding: 5vw  0 5vw 5vw;
+    text-decoration: none;
+    text-transform: uppercase;
+   margin-top: -1px;
+}
+
+#navTop .topmenu li a:hover{
+    background:  #202529;
+     transition: 1s;
+}
+
+.header-block{
+    padding: 18.12vw 21vw 16vw 8.5vw;
+    background: linear-gradient(to top right, #078aa4, #19b4c6);
+    color: white;    
+}
+
+.header-block h1{
+    font-size: 5.6vw;
+    line-height:8.5vw;
+    margin-bottom:6.1vw;
+}
+
+.header-block .row  a{
+    font-size: 3.5vw;
+    text-decoration: none;
+    color: #aad7e0;
+}
+
+.header-block .row .imgrow{
+    display: block;
+    float: right;
+    height: 3vw;
+    transition: 1s;
+    border-radius:10px;
+    cursor: pointer;    
+}
+
+.header-block a:hover{
+
+    color:#202529; 
+    transition: 1s;
+}
+
+.header-block a:hover+.imgrow {
+    border-radius: 100%;
+    /*background: rgba(255, 255, 255, 0.3);
+    box-shadow:  0 0 1px 7px rgba(255, 255, 255, 0.3);*/
+     transform: translateX(400%);
+    transition: 1s; 
+}
+
+.header-block .imgrow a:hover{
+    /* border-radius: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow:  0 0 1px 7px rgba(255, 255, 255, 0.3);
+    transform: rotateZ(990deg);
+    transition: 1s;*/
+}
+
+.header-row-3{
+    display: flex;
+    justify-content:  space-between;
+    padding-left: 8.5vw;    
+    height: 23vw;
+    background: #27212c;
+    color: #6b5f76;   
+}
+
+.header-row-3 .contentrow{
+    display:flex;
+    align-items: center;
+}
+ 
+.header-row-3 p{
+    align-items:center;
+    font-size:2.5vw ;
+}
+
+.header-row-3 .divrow{
+    width:23vw;
+    font-size:1.8vw ;
+    background:#bc3183;
+
+}
+.header-row-3 .divrow a {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.header-row-3 .divrow img{
+    height: 3.9vw;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.header-row-3 .divrow:hover{
+    background: #de53b6;
+    transition: 1s;
+}
+
+.header-row-3 .divrow:hover img{
+   /* border-radius: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow:  0 0 1px 7px rgba(255, 255, 255, 0.3);
+    transform: translateX(400%);
+    transition: 1s;*/
+
+}
+
+.galary li .blockRow{
+    display: flex;
+    height:86.25vw;
+    justify-content: center;
+    align-items: center;
+    background: #5b0fa1;
+    cursor: pointer;
+}
+
+.galary ul li {
+    margin-bottom: -0.6vw; /*появляется белое пространство внизу картинки?*/ 
+}
+
+.galary ul li .blockRow img{
+    height: 10%;
+    width: auto;
+    cursor: pointer;
+    transition: 1s;    
+}
+
+.galary .blockRow:hover{
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.galary .blockRow:hover img {
+    /*border-radius: 100%;
+    padding: 0.1rem;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow:  0 0 1px 1.5rem rgba(255, 255, 255, 0.3);*/
+    transform: translateX(200%);
+    transition: 1s;
+}
+
+.galary ul li img{
+    width: 100%;
+    height: auto;
+}
+
+#content {
+    padding: 12.5vw 9.4vw 12.5vw 11.5vw;
+    background: #ebebeb;
+}
+
+#content h1 ,#content h1 a {
+    color: #088ca5;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#content h1{
+    margin-bottom: 1.7rem;
+} 
+
+#content p{
+    margin-bottom: 1.7rem;
+    line-height: 2rem;
+}
+
+/*--  --------------------------------------------------*/
+@media (min-width:980px){
+    
+    html{
+
+        font:13px/32px 'Montserrat', sans-serif;
+    }
+
+    #navTop{
+        height: 9.5vw;
+    }
+    
+    #navTop .titleRow p,
+    #navTop .titleRow .showMenu{
+        display: none;
+    }
+    
+    #navTop .topmenu{
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        transform: translateY(0);
+    }
+
+    #navTop .showMenu{
+    line-height:9.5vw; }
+
+    
+    #navTop .topmenu li{
+        display: inline-flex;        
+    }
+    
+    #navTop .topmenu li a{
+        padding: 0 1.8vw;
+        vertical-align: middle;
+        line-height: 9.5vw;
+        font-size: 1.2vw;
+    }
+    
+    #navTop .topmenu li:first-child a{
+        padding-left: 6.8vw;
+    }
+    
+    #navTop:hover .topmenu{
+        transform: none;
+    }
+    
+    .galary ,.galary ul li .blockRow,
+    .galary ul li img{
+        height: 29vw;
+    }
+    
+    .galary ul{
+        width: 100%;      
+        display: flex;        
+        flex-wrap: nowrap;
+    }
+    
+    .galary ul li {      
+        margin-bottom: 0;
+    }
+    
+    
+    .galary ul li:first-child{
+        width: 34%;
+    }
+    
+  .galary ul li img{                
+        width: auto;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .galary li img:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    
+    
+    .galary li .blockRow{        
+        height:100%;
+        /*flex-grow: 1;*/
+    }
+    
+    #content{
+        padding:7vw 8vw 8vw 7.75vw;
+    }
+    
+    #content h1{
+        font-size: 1.2rem;
+        margin-bottom: 2.5vw;
+    }
+    
+    #content .text{
+           overflow: hidden;
+    }
+    
+    #content .text p{
+        margin-bottom: 1.5rem;
+
+    }
+    
+    #content .column{
+        width: 38vw;
+    }
+    
+    #content .left-column{
+        float: left;
+    }
+    
+    #content .right-column{
+        float: right;
+    }
+    
+    
+}
+
+
+
