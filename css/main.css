@@ -119,7 +119,8 @@ html{
 }
 
 #navTop:hover .topmenu  {
-    transform: translateY(36px);
+    z-index:2;
+    transform: translateY(11.25vw);
     transition: 1s ease-out;   
 }
 
@@ -249,6 +250,7 @@ html{
 .galary .blockRow:hover{
     filter: alpha(opacity=50);
     opacity: 0.5;
+    transition: 1s;
 }
 
 .galary .blockRow:hover .galary-img {
